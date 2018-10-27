@@ -18,7 +18,6 @@ end_ip =str(ip5) +"."+ str(ip6)+"."+str(ip7)+"."+str(ip8)
 current_ip = start_ip
 while (end_ip != current_ip):
         
-        if ip4 != 255:
             ip4 = ip4+1
         elif ip4 == 255:
             ip3 = ip3+1
@@ -35,8 +34,12 @@ while (end_ip != current_ip):
 
         try:
             result = s.connect((current_ip,23))
-            print(current_ip +" connected port 23")
         except :
             print(current_ip +' connection error')
+        
+        
+            print(current_ip +" connected port 23")
+        
+        
         finally:
             s.close()
